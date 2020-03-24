@@ -20,13 +20,13 @@ namespace DiableGlobalShortcuts_Background
 
         private void App_Startup(object sender, StartupEventArgs e)
         {
-        //1 无感知禁用全局快捷键
-    HotKeys hotKeys = new HotKeys();
-    hotKeys.Register((int)HotkeyModifiers.Control, Keys.N);
-    hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D1);
-    hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D2);
-    hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D3);
-    hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D4);
+            //1 无感知禁用全局快捷键
+            HotKeys hotKeys = new HotKeys();
+            hotKeys.Register((int)HotkeyModifiers.Control, Keys.N);
+            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D1);
+            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D2);
+            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D3);
+            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D4);
             //2 无感知禁用全局快捷键后回调
             //var hotKeyHandleWindow = new HotKeyHandleWindow();
             //hotKeyHandleWindow.Show();
