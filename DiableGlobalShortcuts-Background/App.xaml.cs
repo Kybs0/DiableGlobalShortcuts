@@ -9,7 +9,7 @@ using MessageBox = System.Windows.Forms.MessageBox;
 namespace DiableGlobalShortcuts_Background
 {
     /// <summary>
-    /// App.xaml 的交互逻辑
+    /// 快捷键注册
     /// </summary>
     public partial class App : Application
     {
@@ -20,17 +20,17 @@ namespace DiableGlobalShortcuts_Background
 
         private void App_Startup(object sender, StartupEventArgs e)
         {
-            //1 无感知禁用全局快捷键
-            HotKeys hotKeys = new HotKeys();
-            hotKeys.Register((int)HotkeyModifiers.Control, Keys.N);
-            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D1);
-            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D2);
-            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D3);
-            hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D4);
-            //2 无感知禁用全局快捷键后回调
-            //var hotKeyHandleWindow = new HotKeyHandleWindow();
-            //hotKeyHandleWindow.Show();
-            //hotKeyHandleWindow.Hide();
+            //1无感知禁用全局快捷键
+            //HotKeys hotKeys = new HotKeys();
+            //hotKeys.Register((int)HotkeyModifiers.Control, Keys.N);
+            //hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D1);
+            //hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D2);
+            //hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D3);
+            //hotKeys.Register((int)HotkeyModifiers.Control + (int)HotkeyModifiers.Alt, Keys.D4);
+            //2 无感知禁用全局快捷键后，并添加此在指定窗口的快捷键消息
+            var hotKeyHandleWindow = new HotKeyHandleWindow();
+            hotKeyHandleWindow.Show();
+            hotKeyHandleWindow.Hide();
         }
 
     }
